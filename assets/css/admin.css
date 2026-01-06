@@ -1,0 +1,42 @@
+.product-select-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.product-select-list .product-box {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: relative;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.product-select-list .product-box:hover {
+    border-color: #0073aa; /* WooCommerce blue */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-select-list .product-box input[type="checkbox"] {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.product-select-list .product-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-select-list .product-box strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+

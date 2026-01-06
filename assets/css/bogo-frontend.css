@@ -1,0 +1,217 @@
+/* BOGO Frontend Styles */
+#bogo-offer-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: 9999;
+    will-change: opacity, transform;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#bogo-offer-modal.hide {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+
+.bogo-modal-content {
+    background: #fff;
+    padding: 20px;
+    max-width: 650px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+#bogo-close-modal {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    color: #666;
+    font-weight: bold;
+    z-index: 10000;
+}
+
+#bogo-close-modal:hover {
+    color: #000;
+}
+
+.bogo-offer-box {
+    margin-bottom: 20px;
+}
+
+.bogo-offer-box h3 {
+    color: #26a69a;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
+.variable-product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.variable-product-table thead th {
+    background: #26a69a; /* Teal/green color from image */
+    color: #fff;
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.variable-product-table tbody td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.variable-product-table .price {
+    font-weight: bold;
+    color: #333;
+}
+
+.variable-product-table .price-unit {
+    font-size: 12px;
+    color: #666;
+}
+
+.variable-product-table .list-quantity input.qty {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.variable-product-table .add-bogo .button,
+.bogo-add-to-cart {
+    background-color: #26a69a !important; /* Teal/green button color */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+
+.bogo-add-to-cart:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.bogo-add-to-cart.loading {
+    opacity: 0.7;
+}
+
+.bogo-offer-notice {
+    background-color: #f7f7f7;
+    border-left: 4px solid #26a69a;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.bogo-offer-notice h3 {
+    margin-top: 0;
+    color: #26a69a;
+}
+
+.woocommerce .bogo-popup-btn  {
+    background-color: #26a69a !important;
+}
+
+.bogo-discount {
+    font-style: italic;
+    color: #26a69a;
+}
+
+/* Additional modal body styles */
+#bogo-offer-modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+/* Style quantity wrapper */
+.bogo-buy-form .quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+/* Style the number input */
+.bogo-buy-form .quantity input[type=number] {
+    -moz-appearance: textfield; /* remove Firefox inner arrows */
+    appearance: textfield;
+    width: 70px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Restore arrows in Chrome, Edge, Safari */
+.bogo-buy-form .quantity input[type=number]::-webkit-outer-spin-button,
+.bogo-buy-form .quantity input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: inner-spin-button;
+    appearance: auto;
+    margin: 0;
+}
+
+/* Make arrows more visible (optional) */
+.bogo-buy-form .quantity input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    height: 20px;
+}
+
+/* New styles for inline display of simple product form */
+.bogo-simple-product-inline {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    margin-bottom: 15px;
+}
+
+.bogo-simple-product-inline form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    width: 100%;
+}
+
+.bogo-simple-product-inline .price {
+    color: #f58220; /* orange color as in second image */
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.bogo-simple-product-inline .quantity {
+    margin: 0;
+}
+
+.bogo-simple-product-inline .bogo-add-to-cart {
+    flex-shrink: 0;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 20px;
+}
